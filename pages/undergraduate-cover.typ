@@ -90,7 +90,7 @@
           "年级与专业", info.grade + info.major,
           "所在学院", info.department,
           grid.cell(stroke: none)[], grid.cell(stroke: none)[],
-          "递交日期", info.submit-date,
+          "提交日期", info.submit-date,
         )
       ],
     )

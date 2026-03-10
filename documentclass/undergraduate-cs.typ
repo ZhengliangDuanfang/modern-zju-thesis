@@ -24,7 +24,7 @@
 #import "../dependency/i-figured.typ"
 
 
-#let undergraduate-cs-set-style(doc, twoside: true, bibmode: "citext") = {
+#let undergraduate-cs-set-style(doc, twoside: true, footer-twoside: false, bibmode: "citext") = {
   // Page geometry
   set page(
     paper: "a4",
@@ -34,7 +34,7 @@
       top: 2.54cm + 12pt + 4mm,
     ),
   )
-  show: show-twoside-pagebreak.with(twoside: twoside)
+  show: show-twoside-pagebreak.with(twoside: twoside, footer-twoside: footer-twoside)
 
   // Header and footer
   set page(
@@ -117,6 +117,7 @@
 #let undergraduate-cs(
   info: (:),
   twoside: true,
+  footer-twoside: false,
   bibsource: "",
   bibmode: "citext",
 ) = {
@@ -152,7 +153,7 @@
     style: doc => {
       set document(title: info.title.join())
 
-      let doc = undergraduate-cs-set-style(doc, twoside: twoside, bibmode: bibmode)
+      let doc = undergraduate-cs-set-style(doc, twoside: twoside, footer-twoside: footer-twoside, bibmode: bibmode)
       show: bib.bibshow
 
       bib.hiddenbib + doc

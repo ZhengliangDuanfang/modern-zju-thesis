@@ -5,7 +5,7 @@
 #let undergraduate-decl(
   row-gutter: 11.5pt,
 ) = {
-  template-individual("浙江大学本科生毕业论文（设计）承诺书")[
+  template-individual("浙江大学本科生毕业论文（设计）承诺书", insert-emptypage: true)[
     #set underline(offset: 0.2em)
     #show enum.item: x => [ #x.number. #x.body]
 

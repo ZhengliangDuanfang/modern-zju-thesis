@@ -16,6 +16,7 @@
 #let doc = undergraduate-cs(
   info: info,
   twoside: true,
+  footer-twoside: false,
   bibsource: read("ref.bib"),
   bibmode: "citext",
 )

@@ -5,7 +5,7 @@
 #let twoside-numbering-footer = metadata(<mzt:twoside-numbering-footer>)
 
 
-#let show-twoside-pagebreak(s, twoside: true) = {
+#let show-twoside-pagebreak(s, twoside: true, footer-twoside: false) = {
   show metadata.where(value: <mzt:twoside-pagebreak>): pagebreak(
     weak: true,
     to: if twoside {
@@ -20,7 +20,7 @@
   ]
 
   show metadata.where(value: <mzt:twoside-numbering-footer>): [
-    #if twoside {
+    #if footer-twoside {
       footer(
         left: numbering => if calc.even(here().page()) {
           numbering

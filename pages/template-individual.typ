@@ -1,10 +1,11 @@
 #import "../utils/fonts.typ": 字体, 字号
 #import "../utils/datetime-display.typ": datetime-display
-#import "../utils/twoside.typ": twoside-pagebreak
+#import "../utils/twoside.typ": twoside-pagebreak, twoside-emptypage
 
 #let template-individual(
   outlined: false,
   indent-first-par: true,
+  insert-emptypage: false,
   titlelevel: 2,
   titletext-settings: (size: 字号.小三, font: 字体.仿宋),
   bodytext-settings: (size: 字号.四号),
@@ -28,7 +29,10 @@
       #s
     ]
 
-
-    twoside-pagebreak
+    if insert-emptypage {
+      twoside-emptypage
+    }else{
+      twoside-pagebreak
+    }
   }
 }
