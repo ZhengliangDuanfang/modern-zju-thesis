@@ -2,7 +2,8 @@
 
 #let bibliography-page(bib: auto, individual: auto) = {
   individual(
-    "参考文献",
+    strong("参考文献"),
     bib,
+    outlined: true,
   )
 }

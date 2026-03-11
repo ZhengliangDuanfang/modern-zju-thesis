@@ -1,13 +1,13 @@
 #import "../pages/undergraduate-cover.typ": undergraduate-cover
 #import "../pages/undergraduate-decl.typ": undergraduate-decl
 #import "../pages/template-individual.typ": template-individual
-#import "../pages/outline.typ": main-outline
 #import "../pages/bibliography.typ": bibliography-page
 #import "../pages/undergraduate-task.typ": undergraduate-task
 #import "../pages/undergraduate-eval.typ": undergraduate-eval
 #import "../pages/undergraduate-proposal-cover.typ": undergraduate-proposal-cover
 #import "../pages/undergraduate-proposal-task.typ": undergraduate-proposal-task
 #import "../pages/undergraduate-proposal-eval.typ": undergraduate-proposal-eval
+#import "../pages/undergraduate-outline.typ": undergraduate-first-outline
 
 #import "../utils/fonts.typ": *
 #import "../utils/part.typ": part, part-and-headings, show-outline-with-part, show-part
@@ -136,7 +136,7 @@
     pages: (
       cover: undergraduate-cover(info: info),
       decl: undergraduate-decl(),
-      outline: main-outline(target: part-and-headings),
+      first-outline: undergraduate-first-outline("目  录"),
       task: undergraduate-task.with(info: info),
       individual: template-individual,
       eval: undergraduate-eval,

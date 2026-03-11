@@ -34,14 +34,14 @@
 #individual("摘 要")[]
 #individual("Abstract")[]
 
-#doc.pages.outline
+#doc.pages.first-outline
 
 #show: mainmatter
 
 #part[毕业论文]
 #include "./common/body.typ"
 
-#doc.pages.bibliography
+#doc.pages.bibliography <end-part-1-main>
 
 
 #individual("附录", outlined: true)[
@@ -68,17 +68,27 @@
 
 ]
 
-#(doc.pages.task)()[任务]
+#(doc.pages.task)()[任务] <end-part-2-main>
 #(doc.pages.eval)(scores: (8, 15, 5, 60))[评价]
 
 #part[开题报告]
 #doc.pages.proposal-cover
 #(doc.pages.proposal-task)[
   内容
-]
+]<begin-proposal>
 
-
-#counter(page).update(0)
+#counter(page).update(1)
+#set page(numbering: "1")
+#set heading(numbering: (..nums) => {
+  if nums.pos().len() == 1 {
+    none
+  } else {
+    nums.pos().slice(1).map(str).join(".")
+  }
+})
+#show heading.where(level: 1): x => {
+  align(center, strong(x))
+}
 #(doc.components.new-bib)()
 
 = 文献综述
