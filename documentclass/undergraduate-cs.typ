@@ -7,7 +7,7 @@
 #import "../pages/undergraduate-proposal-cover.typ": undergraduate-proposal-cover
 #import "../pages/undergraduate-proposal-task.typ": undergraduate-proposal-task
 #import "../pages/undergraduate-proposal-eval.typ": undergraduate-proposal-eval
-#import "../pages/undergraduate-outline.typ": undergraduate-first-outline
+#import "../pages/undergraduate-outline.typ": undergraduate-first-outline, undergraduate-second-outline
 
 #import "../utils/fonts.typ": *
 #import "../utils/part.typ": part, part-and-headings, show-outline-with-part, show-part
@@ -137,6 +137,7 @@
       cover: undergraduate-cover(info: info),
       decl: undergraduate-decl(),
       first-outline: undergraduate-first-outline("目  录"),
+      second-outline: undergraduate-second-outline("目  录"),
       task: undergraduate-task.with(info: info),
       individual: template-individual,
       eval: undergraduate-eval,

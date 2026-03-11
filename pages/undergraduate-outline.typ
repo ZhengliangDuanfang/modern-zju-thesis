@@ -132,3 +132,59 @@
   },
   )
 }
+
+#let undergraduate-second-outline(
+  title: "目录",
+  titlelevel: 2,
+  outlined: false,
+  bodytext-settings: (size: 字号.四号, font: 字体.仿宋),
+  titletext-settings: (
+    size: 字号.小三,
+    font: 字体.仿宋,
+  ),
+  ..args,
+) = {
+  template-individual(
+  outlined: outlined,
+  titlelevel: titlelevel,
+  bodytext-settings: bodytext-settings,
+  titletext-settings: titletext-settings,
+  text(size: 字号.三号, font: 字体.仿宋, title),
+  context {
+    let proposal-chapters = query(
+      heading
+        .where(
+          // level: 1,
+          outlined: true,
+        )
+        .after(<begin-proposal>)
+        .before(<end-proposal>),
+    )
+    {
+      for chapter in proposal-chapters {
+        let loc = chapter.location()
+        let number = counter(heading).at(loc)
+        let nr = numbering(
+          loc.page-numbering(),
+          ..counter(page).at(loc),
+        )
+        let number-and-body = if chapter.level == 1 {
+          text(font: 字体.黑体, strong(chapter.body))
+        } else if chapter.level == 2 {
+          number.slice(1).map(str).join(".") + ". " + chapter.body
+        } else {
+          number.slice(1).map(str).join(".") + " " + chapter.body
+        }
+        pad(left: (chapter.level - 1) * 1em)[
+          #link(chapter.location())[
+            #grid(
+              columns: (auto, 4pt, 1fr, 4pt, auto),
+              number-and-body, [], repeat(gap: 0.15em)[.], [], nr,
+            )
+          ]
+        ]
+      }
+    }
+  },
+  )
+}
