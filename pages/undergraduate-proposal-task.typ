@@ -8,7 +8,7 @@
     #set text(size: 字号.四号)
     #h(-2em)#strong[一、题目：#info.title.join()<mzt:no-header-footer>]
 
-    #h(-2em)#strong[二、指导教师对文献综述开题报告、外文翻译的具体要求：]
+    #h(-2em)#strong[二、指导教师对文献综述和开题报告的具体要求：]
 
     #s
 
