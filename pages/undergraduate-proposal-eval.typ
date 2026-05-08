@@ -8,7 +8,7 @@
   scores-supervisor: none,
   scores-college: none,
 ) = {
-  template-individual("毕业论文（设计）文献综述和开题报告考核", outlined: true)[
+  template-individual("毕业论文（设计）文献综述和开题报告考核", outlined: true, insert-emptypage: true)[
     #set text(weight: "bold", size: 字号.小四)
     导师对开题报告、外文翻译和文献综述的评语及成绩评定：<mzt:no-header-footer>\
     #v(1em)

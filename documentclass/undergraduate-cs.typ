@@ -136,8 +136,8 @@
     pages: (
       cover: undergraduate-cover(info: info),
       decl: undergraduate-decl(),
-      first-outline: undergraduate-first-outline("目  录"),
-      second-outline: undergraduate-second-outline("目  录"),
+      first-outline: undergraduate-first-outline(),
+      second-outline: undergraduate-second-outline(),
       task: undergraduate-task.with(info: info),
       individual: template-individual,
       eval: undergraduate-eval,

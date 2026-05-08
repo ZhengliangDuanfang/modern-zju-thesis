@@ -36,7 +36,8 @@
     set text(weight: "bold", font: 字体.仿宋)
 
     align(right)[
-      涉密论文 $square$ #h(1em) 公开论文 $square$ #h(8em)
+      #set text(weight: "bold", font: 字体.宋体, size: 字号.五号)
+      涉密论文 $square$ #h(1em) 公开论文 $square$ #h(2em)
     ]
 
     set align(center)
@@ -46,9 +47,9 @@
     image("../assets/zju-name.svg", width: page.width * 0.5)
     v(2pt)
 
-    text(size: 字号.小一, font: 字体.黑体, spacing: 50%)[本 科 生 毕 业 论 文<mzt:no-header-footer>]
+    text(size: 字号.小一, font: 字体.黑体, spacing: 150%)[本 科 生 毕 业 论 文（设计）<mzt:no-header-footer>]
 
-    image("../assets/zju-emblem.svg", width: page.width * 0.17)
+    image("../assets/zju-emblem.svg", width: page.width * 0.15)
 
     v(20pt)
 
@@ -61,13 +62,13 @@
     }
 
     block(
-      width: 70%,
+      width: 76%,
       [
         #set text(size: 字号.三号)
         #grid(
           columns: (0.5fr, 1fr),
           align: (start, center),
-          rows: 1em,
+          rows: 1.2em,
           stroke: (x, y) => (
             bottom: if x == 1 {
               stoke-width
@@ -76,11 +77,12 @@
             },
           ),
           row-gutter: row-gutter,
-          "题目", info.title.first(),
+          "题目", "基于多模态思维链强化学习的",
+          [], "医学视觉大语言模型",
           ..info.title.slice(1).map(v => (none, v)).flatten(),
           ..range(0, numspacing)
             .map(_ => (
-              grid.cell(stroke: none)[],
+              // grid.cell(stroke: none)[],
               grid.cell(stroke: none)[],
             ))
             .flatten(),

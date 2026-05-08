@@ -9,6 +9,8 @@
   titlelevel: 2,
   titletext-settings: (size: 字号.小三, font: 字体.仿宋),
   bodytext-settings: (size: 字号.四号),
+  title-upedge: 0pt,
+  title-bottom: 1em,
   pagetitle,
   s,
 ) = {
@@ -19,8 +21,9 @@
       center,
       text(size: titletext-settings.size, weight: "bold")[
         #show heading: x => text(x.body, ..titletext-settings)
+        #v(title-upedge)
         #heading(pagetitle, numbering: none, level: 1, outlined: outlined)
-        #v(1em)],
+        #v(title-bottom)],
     )
 
     block(width: 100%)[

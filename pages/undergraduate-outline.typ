@@ -2,7 +2,7 @@
 #import "../utils/fonts.typ": 字体, 字号
 
 #let undergraduate-first-outline(
-  title: "目录",
+  title: "目    录",
   titlelevel: 2,
   outlined: false,
   bodytext-settings: (size: 字号.四号, font: 字体.仿宋),
@@ -18,6 +18,8 @@
   bodytext-settings: bodytext-settings,
   titletext-settings: titletext-settings,
   text(size: 字号.三号, font: 字体.仿宋, title),
+  title-upedge: 16pt,
+  title-bottom: 4pt,
   context {
     let main-chapters = query(
       heading
@@ -134,7 +136,7 @@
 }
 
 #let undergraduate-second-outline(
-  title: "目录",
+  title: "目    录",
   titlelevel: 2,
   outlined: false,
   bodytext-settings: (size: 字号.四号, font: 字体.仿宋),
