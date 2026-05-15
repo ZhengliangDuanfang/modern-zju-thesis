@@ -11,7 +11,7 @@
       return it
     }
     let heading-levels = counter(heading).at(el.location())
-    let body = numbering(el.numbering, ..heading-levels)
+    let body = heading-levels.map(str).join(".")
     link(el.location(), "第" + body + el.supplement)
   }
 

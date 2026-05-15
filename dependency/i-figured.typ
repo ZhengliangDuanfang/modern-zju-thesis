@@ -104,7 +104,7 @@
   level: 1,
   zero-fill: true,
   leading-zero: true,
-  numbering: "(1.1)",
+  numbering: "(1-1)",
   prefix: "eqt:",
   only-labeled: false,
   unnumbered-label: "-",
