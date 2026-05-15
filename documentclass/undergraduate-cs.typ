@@ -87,8 +87,15 @@
   // Reference
   show: show-set-supplement
   show figure: i-figured.show-figure.with(extra-prefixes: (algorithm: "alg:"))
+  show figure: set block(below: 1.3em)
+  show std.figure.caption: set text(font: 字体.宋体, size: 字号.五号, weight: "bold")
   show math.equation.where(block: true): i-figured.show-equation
   show figure.where(kind: table): set figure.caption(position: top)
+  show table: it => {
+    set text(font: 字体.宋体, size: 字号.五号)
+    set par(leading: 0em, first-line-indent: 0em)
+    it
+  }
 
   show figure.where(kind: "algorithm"): set figure.caption(position: top)
 
