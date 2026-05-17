@@ -85,51 +85,51 @@
           ]
         ]
       }
-      pad(left: 0em)[#grid(
-        columns: (auto, 4pt, 1fr),
-        text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）任务书》")), [], repeat(gap: 0.15em)[.],
-      )]
-      pad(left: 0em)[#grid(
-        columns: (auto, 4pt, 1fr),
-        text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）考核表》")), [], repeat(gap: 0.15em)[.],
-      )]
-      pad(left: 0em, top: 2pt, bottom: 2pt)[#text(
-        font: 字体.仿宋,
-        size: 字号.四号,
-        strong("第二部分  文献综述和开题报告"),
-      )]
-      pad(left: 0em)[#grid(
-        columns: (auto, 4pt, 1fr),
-        text(font: 字体.黑体, strong("文献综述和开题报告封面")), [], repeat(gap: 0.15em)[.],
-      )]
-      pad(left: 0em)[#grid(
-        columns: (auto, 4pt, 1fr),
-        text(font: 字体.黑体, strong("指导教师对文献综述和开题报告具体内容要求")), [], repeat(gap: 0.15em)[.],
-      )]
-      pad(left: 0em)[#grid(
-        columns: (auto, 4pt, 1fr, 4pt, auto),
-        text(font: 字体.黑体, strong("目录")), [], repeat(gap: 0.15em)[.], [], "I"
-      )]
-      for chapter in proposal-chapters {
-        let loc = chapter.location()
-        let number = counter(heading).at(loc)
-        let nr = numbering(
-          loc.page-numbering(),
-          ..counter(page).at(loc),
-        )
-        pad(left: 0em)[
-          #link(chapter.location())[
-            #grid(
-              columns: (auto, 4pt, 1fr, 4pt, auto),
-              chapter.body, [], repeat(gap: 0.15em)[.], [], nr,
-            )
-          ]
-        ]
-      }
-      pad(left: 0em)[#grid(
-        columns: (auto, 4pt, 1fr),
-        text(font: 字体.黑体, strong("《浙江大学本科生文献综述和开题报告考核表》")), [], repeat(gap: 0.15em)[.],
-      )]
+      // pad(left: 0em)[#grid(
+      //   columns: (auto, 4pt, 1fr),
+      //   text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）任务书》")), [], repeat(gap: 0.15em)[.],
+      // )]
+      // pad(left: 0em)[#grid(
+      //   columns: (auto, 4pt, 1fr),
+      //   text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）考核表》")), [], repeat(gap: 0.15em)[.],
+      // )]
+      // pad(left: 0em, top: 2pt, bottom: 2pt)[#text(
+      //   font: 字体.仿宋,
+      //   size: 字号.四号,
+      //   strong("第二部分  文献综述和开题报告"),
+      // )]
+      // pad(left: 0em)[#grid(
+      //   columns: (auto, 4pt, 1fr),
+      //   text(font: 字体.黑体, strong("文献综述和开题报告封面")), [], repeat(gap: 0.15em)[.],
+      // )]
+      // pad(left: 0em)[#grid(
+      //   columns: (auto, 4pt, 1fr),
+      //   text(font: 字体.黑体, strong("指导教师对文献综述和开题报告具体内容要求")), [], repeat(gap: 0.15em)[.],
+      // )]
+      // pad(left: 0em)[#grid(
+      //   columns: (auto, 4pt, 1fr, 4pt, auto),
+      //   text(font: 字体.黑体, strong("目录")), [], repeat(gap: 0.15em)[.], [], "I"
+      // )]
+      // for chapter in proposal-chapters {
+      //   let loc = chapter.location()
+      //   let number = counter(heading).at(loc)
+      //   let nr = numbering(
+      //     loc.page-numbering(),
+      //     ..counter(page).at(loc),
+      //   )
+      //   pad(left: 0em)[
+      //     #link(chapter.location())[
+      //       #grid(
+      //         columns: (auto, 4pt, 1fr, 4pt, auto),
+      //         chapter.body, [], repeat(gap: 0.15em)[.], [], nr,
+      //       )
+      //     ]
+      //   ]
+      // }
+      // pad(left: 0em)[#grid(
+      //   columns: (auto, 4pt, 1fr),
+      //   text(font: 字体.黑体, strong("《浙江大学本科生文献综述和开题报告考核表》")), [], repeat(gap: 0.15em)[.],
+      // )]
     }
   },
   )
