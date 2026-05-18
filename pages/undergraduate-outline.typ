@@ -60,7 +60,12 @@
         } else {
           chapter.body
         }
-        pad(left: (chapter.level - 1) * 1em)[
+        let left-pad = if chapter.level == 1 {
+          0em
+        } else {
+          (chapter.level - 1) * 1.2em + 0.8em
+        }
+        pad(left: left-pad)[
           #link(chapter.location())[
             #grid(
               columns: (auto, 10pt, auto, 4pt, 1fr, 4pt, auto),

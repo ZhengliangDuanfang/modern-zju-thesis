@@ -11,18 +11,25 @@
   bodytext-settings: (size: 字号.四号),
   title-upedge: 0pt,
   title-bottom: 1em,
+  alter-pagetitle: none, 
   pagetitle,
   s,
 ) = {
+  let outline-pagetitle = if alter-pagetitle != none {
+    alter-pagetitle
+  } else {
+    pagetitle
+  }
+
   context {
     twoside-pagebreak
 
     align(
       center,
       text(size: titletext-settings.size, weight: "bold")[
-        #show heading: x => text(x.body, ..titletext-settings)
+        #show heading: x => text(pagetitle, ..titletext-settings)
         #v(title-upedge)
-        #heading(pagetitle, numbering: none, level: 1, outlined: outlined)
+        #heading(outline-pagetitle, numbering: none, level: 1, outlined: outlined)
         #v(title-bottom)],
     )
 

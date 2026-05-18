@@ -37,7 +37,7 @@
 
     align(right)[
       #set text(weight: "bold", font: 字体.宋体, size: 字号.五号)
-      涉密论文 $square$ #h(1em) 公开论文 $square$ #h(2em)
+      涉密论文 $ballot$ #h(1em) 公开论文 $ballot.check.heavy$ #h(2em)
     ]
 
     set align(center)
