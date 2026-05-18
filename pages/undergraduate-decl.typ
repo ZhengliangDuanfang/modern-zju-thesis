@@ -28,8 +28,8 @@
           align: (start, right, right),
           stroke: none,
           row-gutter: 0.75em,
-          [], [ 毕业论文（设计）作者签名： ], [],
-          [], [ 签字日期： ], [ 年#h(1.5em)月#h(1.5em)日],
+          [], text(..(size: 字号.四号, font: 字体.仿宋 ))[ 毕业论文（设计）作者签名： ], [],
+          [], text(..(size: 字号.四号, font: 字体.仿宋 ))[ 签字日期： ], text(..(size: 字号.四号, font: 字体.仿宋 ))[ 年#h(1.5em)月#h(1.5em)日],
         )
       ]
     ]
@@ -56,8 +56,8 @@
           align: (start, right, center),
           stroke: none,
           row-gutter: 1em,
-          [ 毕业论文（设计）作者签名： ], [], [导师签名：],
-          [ 签字日期：#h(1.5em)年#h(1.5em)月#h(1.5em)日 ], [], [签字日期：#h(1.5em)年#h(1.5em)月#h(1.5em)日],
+          text(..(size: 字号.四号, font: 字体.仿宋 ))[ 毕业论文（设计）作者签名： ], [], text(..(size: 字号.四号, font: 字体.仿宋 ))[导师签名：],
+          text(..(size: 字号.四号, font: 字体.仿宋 ))[ 签字日期：#h(1.5em)年#h(1.5em)月#h(1.5em)日 ], [], text(..(size: 字号.四号, font: 字体.仿宋 ))[签字日期：#h(1.5em)年#h(1.5em)月#h(1.5em)日],
         )
       ]
       #v(12pt)
