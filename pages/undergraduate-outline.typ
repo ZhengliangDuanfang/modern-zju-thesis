@@ -90,14 +90,14 @@
           ]
         ]
       }
-      // pad(left: 0em)[#grid(
-      //   columns: (auto, 4pt, 1fr),
-      //   text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）任务书》")), [], repeat(gap: 0.15em)[.],
-      // )]
-      // pad(left: 0em)[#grid(
-      //   columns: (auto, 4pt, 1fr),
-      //   text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）考核表》")), [], repeat(gap: 0.15em)[.],
-      // )]
+      pad(left: 0em)[#grid(
+        columns: (auto, 4pt, 1fr),
+        text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）任务书》")), [], repeat(gap: 0.15em)[.],
+      )]
+      pad(left: 0em)[#grid(
+        columns: (auto, 4pt, 1fr),
+        text(font: 字体.黑体, strong("《浙江大学本科生毕业论文（设计）考核表》")), [], repeat(gap: 0.15em)[.],
+      )]
       // pad(left: 0em, top: 2pt, bottom: 2pt)[#text(
       //   font: 字体.仿宋,
       //   size: 字号.四号,

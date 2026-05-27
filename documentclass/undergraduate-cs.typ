@@ -15,7 +15,7 @@
 #import "../utils/header.typ": footer, header
 #import "../utils/cjk-fontstyle.typ": show-cn-fontstyle
 #import "../utils/supplement.typ": show-set-supplement
-#import "../utils/twoside.typ": show-twoside-pagebreak, twoside-numbering-footer, twoside-pagebreak
+#import "../utils/twoside.typ": show-twoside-pagebreak, twoside-numbering-footer, twoside-pagebreak, twoside-emptypage, twoside-newsecpage
 #import "../utils/structure.typ": frontmatter, mainmatter
 #import "../utils/appendix.typ": appendix
 #import "../utils/flex-caption.typ": show-flex-caption
@@ -30,8 +30,8 @@
     paper: "a4",
     margin: (
       x: 3.18cm,
-      bottom: 2.54cm + 12pt + 30pt,
-      top: 2.54cm + 12pt + 4mm,
+      bottom: 2.0cm + 12pt + 30pt,
+      top: 2.2cm + 12pt + 4mm,
     ),
   )
   show: show-twoside-pagebreak.with(twoside: twoside, footer-twoside: footer-twoside)
@@ -43,7 +43,7 @@
     header: header(
       left: context {
         if calc.even(here().page()) {
-          "浙江大学本科生毕业论文"
+          "浙江大学本科生毕业论文（设计）"
         }
       },
       right: context {
@@ -72,7 +72,7 @@
     },
   )
   show heading.where(level: 1): x => {
-    twoside-pagebreak
+    twoside-newsecpage
     v(12pt)
     x
     v(6pt)

@@ -2,6 +2,7 @@
 
 #let twoside-pagebreak = metadata(<mzt:twoside-pagebreak>)
 #let twoside-emptypage = metadata(<mzt:twoside-emptypage>)
+#let twoside-newsecpage = metadata(<mzt:twoside-newsecpage>)
 #let twoside-numbering-footer = metadata(<mzt:twoside-numbering-footer>)
 
 
@@ -18,6 +19,10 @@
       [ #pagebreak()#[#v(100%)]<mzt:no-header-footer> ]
     }
   ]
+
+  show metadata.where(value: <mzt:twoside-newsecpage>): pagebreak(
+    weak: true,
+  )
 
   show metadata.where(value: <mzt:twoside-numbering-footer>): [
     #if footer-twoside {
