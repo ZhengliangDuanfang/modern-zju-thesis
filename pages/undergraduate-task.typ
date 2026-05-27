@@ -13,7 +13,8 @@
     #task
     #v(1fr)
     // #v(0.8fr)
-    #h(-2em)#strong[起讫日期#h(.5em) 20 #h(1.2em) 年 #h(1.3em) 月 #h(1.2em) 日#h(.5em)至 20 #h(1.2em) 年 #h(1.3em) 月 #h(1.2em) 日]
+    #h(-2em)#strong[起讫日期#h(.2em) 2025 #h(.2em) 年 #h(.2em) 6 #h(.2em) 月 #h(.2em) 13 #h(.2em) 日#h(.4em)
+    至#h(.2em) 2026 #h(.2em) 年 #h(.2em) 6 #h(.2em) 月 #h(.2em) 3 #h(.2em) 日]
     // #v(1em)
 
     #strong(
