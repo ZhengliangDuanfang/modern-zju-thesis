@@ -7,7 +7,7 @@
   template-individual(none, outlined: false, insert-emptypage: true)[
     #set text(size: 字号.四号)
     #h(-2em)#strong[一、题目：#info.title.join()<mzt:no-header-footer>]
-
+    #v(1em)
     #h(-2em)#strong[二、指导教师对文献综述和开题报告的具体要求：]
 
     #s
@@ -21,7 +21,7 @@
     )
     #strong(
       align(right)[
-        #box(width: 2em)年#box(width: 2em)月#box(width: 2em)日],
+        #box(width: 2em)年#box(width: 2em)月#box(width: 2em)日#h(30pt)],
     )
   ]
 }

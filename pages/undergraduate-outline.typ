@@ -168,6 +168,7 @@
         .before(<end-proposal>),
     )
     {
+      set text(size: 字号.小四)
       for chapter in proposal-chapters {
         let loc = chapter.location()
         let number = counter(heading).at(loc)
@@ -176,7 +177,7 @@
           ..counter(page).at(loc),
         )
         let number-and-body = if chapter.level == 1 {
-          text(font: 字体.黑体, strong(chapter.body))
+          text(font: 字体.黑体, stroke: 0.1pt, chapter.body)
         } else if chapter.level == 2 {
           number.slice(1).map(str).join(".") + ". " + chapter.body
         } else {
