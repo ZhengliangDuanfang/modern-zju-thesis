@@ -90,9 +90,9 @@
                   ()
                 } else {
                   (
-                    [#scores-supervisor.at(0)],
-                    [#scores-supervisor.at(1)],
-                    [#scores-supervisor.at(2)],
+                    [#scores-college.at(0)],
+                    [#scores-college.at(1)],
+                    [#scores-college.at(2)],
                   )
                 }
               )
