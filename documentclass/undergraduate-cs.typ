@@ -135,7 +135,7 @@
 
   let bibcontent = [
     #set par(leading: 0.55em)
-    #set text(size: 字号.小四, font: 字体.宋体)
+    #set text(size: 字号.五号, font: 字体.宋体)
     #bib.bibcontent
   ]
 
