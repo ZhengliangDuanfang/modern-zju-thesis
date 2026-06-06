@@ -47,7 +47,7 @@
     image("../assets/zju-name.svg", width: page.width * 0.5)
     v(2pt)
 
-    text(size: 字号.小一, font: 字体.黑体, spacing: 150%)[本 科 生 毕 业 论 文（设计）<mzt:no-header-footer>]
+    text(size: 字号.小一, font: 字体.黑体, spacing: 150%)[本 科 生 毕 业 论 文<mzt:no-header-footer>]
 
     image("../assets/zju-emblem.svg", width: page.width * 0.15)
 

@@ -43,7 +43,7 @@
     header: header(
       left: context {
         if calc.even(here().page()) {
-          "浙江大学本科生毕业论文（设计）"
+          "浙江大学本科生毕业论文"
         }
       },
       right: context {
